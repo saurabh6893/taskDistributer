@@ -1,11 +1,20 @@
 import React from "react";
 
-const TaskCountCard = () => {
+const TaskCountCard = ({ tag, theme }) => {
+  const themes = {
+    red: "from-red-500 via-red-600 to-red-700",
+    blue: "from-blue-500 via-blue-600 to-blue-700",
+    green: "from-green-500 via-green-600 to-green-700",
+    yellow: "from-yellow-400 via-yellow-500 to-yellow-600",
+  };
+
   return (
     <div className="flex mt-10 justify-between gap-5 screen">
-      <div className="rounded-lg w-[45%] p-10 bg-gradient-to-br from-red-500 via-red-600 to-red-700 shadow-lg animate-fadeIn transition-transform transform hover:scale-105">
+      <div
+        className={`rounded-xl w-full p-10 m-5 bg-gradient-to-br ${themes[theme]} shadow-lg animate-fadeIn transition-transform transform hover:scale-105`}
+      >
         <h2 className="text-4xl font-semibold text-white">0</h2>
-        <h3 className="text-xl font-semibold text-gray-300">New Tasks</h3>
+        <h3 className="text-xl font-semibold text-gray-300">{tag}</h3>
       </div>
     </div>
   );
