@@ -9,9 +9,9 @@ const TaskCountCard = ({ tag, theme }) => {
   };
 
   return (
-    <div className="flex mt-10 justify-between gap-5 screen">
+    <div className="flex justify-between gap-5 screen">
       <div
-        className={`rounded-xl w-full p-10 m-5 bg-gradient-to-br ${themes[theme]} shadow-lg animate-fadeIn transition-transform transform hover:scale-105`}
+        className={`rounded-md w-full p-10 m-5 bg-gradient-to-br ${themes[theme]} shadow-lg animate-fadeIn transition-transform transform hover:scale-x-105 hover:rounded-3xl`}
       >
         <h2 className="text-4xl font-semibold text-white">0</h2>
         <h3 className="text-xl font-semibold text-gray-300">{tag}</h3>
